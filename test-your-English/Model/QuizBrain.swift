@@ -29,7 +29,18 @@ struct QuizBrain {
         Question(q: "The singer ended the concert ______ her most popular song.", a: ["by", "with", "in", "for"], correctAnswer: "with"),
         Question(q: "My husband ______ live in Spain.", a: ["use to", "was use to", "used to", "was used to"], correctAnswer: "used to"),
         Question(q: "I was very ______ in the story.", a: ["interest", "interesting", "interested", "interests"], correctAnswer: "interested"),
-        Question(q: "Dubai has _________ building in the world.", a: ["the most tall", "the tallest", "bigger", "tall"], correctAnswer: "ithe tallest")
+        Question(q: "Dubai has _________ building in the world.", a: ["the most tall", "the tallest", "bigger", "tall"], correctAnswer: "the tallest"),
+        Question(q: "Would you mind _________ these plates a wipe before putting them in the cupboard?", a: ["getting", "giving", "making", "doing"], correctAnswer: "giving"),
+        Question(q: "I was looking forward _________ at the new restaurant, but it was closed.", a: ["to eat", "to have eaten", "to eating", "eating"], correctAnswer: "to eating"),
+        Question(q: "_________ tired Melissa is when she gets home from work, she always makes time to say goodnight to the children.", a: ["Whatever", "No matter how", "However much", "Although"], correctAnswer: "No matter how"),
+        Question(q: "It was only ten days ago _________ she started her new job.", a: ["then", "since", "after", "that"], correctAnswer: "that"),
+        Question(q: "The shop didn't have the shoes I wanted, but they've _________ a pair specially for me.", a: ["booked", "ordered", "commanded", "asked"], correctAnswer: "ordered"),
+        Question(q: "Have you got time to discuss your work now or are you _________ to leave?", a: ["thinking", "round", "planned", "about"], correctAnswer: "about"),
+        Question(q: "She came to live here _________ a month ago.", a: ["quite", "beyond", "already", "almost"], correctAnswer: "almost"),
+        Question(q: "Once the plane is in the air, you can _________ your seat belts if you wish.", a: ["undress", "unfasten", "unlock", "untie"], correctAnswer: "unfasten"),
+        Question(q: "I left my last job because I had no _________ to travel.", a: ["place", "position", "opportunity", "possibility"], correctAnswer: "opportunity"),
+        Question(q: "It wasn't a bad crash and _________ damage was done to my car.", a: ["little", "small", "light", "mere"], correctAnswer: "little")
+        
     ]
     
     func getAnswers() -> [String] {
@@ -50,13 +61,13 @@ struct QuizBrain {
     
     mutating func getLevel() -> String {
         let percentage =  Float(score) / Float(quiz.count)
-        if percentage < 0.2 {
+        if percentage < 0.3 {
             englishLevel = "Your level is: Beginner"
-        } else if percentage < 0.4 {
+        } else if percentage < 0.5 {
             englishLevel = "Your level is: Pre-intermediate"
-        } else if percentage < 0.6 {
+        } else if percentage < 0.7 {
             englishLevel = "Your level is: Intermediate"
-        } else if percentage < 0.8 {
+        } else if percentage < 0.9 {
             englishLevel = "Your level is: Upper-intermediate"
         } else {
             englishLevel = "Your level is: Advanced"
